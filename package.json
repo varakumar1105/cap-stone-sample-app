@@ -1,0 +1,29 @@
+{
+  "name": "fullstack-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varakumar1105/fullstack-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varakumar1105/fullstack-playground/issues"
+  },
+  "homepage": "https://github.com/varakumar1105/fullstack-playground#readme",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
+  },
+  "dependencies": {
+    "jest-puppeteer": "^6.1.0",
+    "puppeteer": "^13.5.0"
+  }
+}

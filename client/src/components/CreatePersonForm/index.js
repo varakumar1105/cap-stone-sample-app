@@ -11,7 +11,7 @@ import {
 
 const CreatePersonForm = () => {
   const [personDetails, setPersonDetails] = useState({
-    id: 0,
+    id: null,
     name: "",
     phone: "",
   });
@@ -31,8 +31,13 @@ const CreatePersonForm = () => {
 
   const onSubmitpersonData = async (event) => {
     event.preventDefault();
-    const response = await createperson();
-    console.log(response);
+    await createperson();
+    setPersonDetails((personDetails) => ({
+      ...personDetails,
+      id: "",
+      name: "",
+      phone: "",
+    }));
   };
 
   const onChangeId = (event) => {

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+import { MainContainer, Heading, Paragraph } from "./styledComponents";
+
 const PersonDetails = () => {
   const [individualDetails, setIndividualDetails] = useState({
     id: 0,
@@ -24,11 +26,12 @@ const PersonDetails = () => {
   }, []);
 
   return (
-    <>
-      <p>{individualDetails.id}</p>
-      <p>{individualDetails.name}</p>
-      <p>{individualDetails.phone}</p>
-    </>
+    <MainContainer>
+      <Heading>Person Details</Heading>
+      <Paragraph>{individualDetails.id}</Paragraph>
+      <Paragraph>{individualDetails.name}</Paragraph>
+      <Paragraph>{individualDetails.phone}</Paragraph>
+    </MainContainer>
   );
 };
 

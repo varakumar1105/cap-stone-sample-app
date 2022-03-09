@@ -1,11 +1,19 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.div``;
+export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 export const Heading = styled.h1``;
 export const Form = styled.form`
-  padding: 10px;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 4px;
 `;
-export const Label = styled.label``;
+export const Label = styled.label`
+  margin-right: 10px;
+`;
 export const InputField = styled.input`
   margin-top: 10px;
 `;
