@@ -1,38 +1,39 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react"
 
-import { MainContainer, Heading, Paragraph } from "./styledComponents";
+import { MainContainer, Heading, Paragraph } from "./styledComponents"
 
 const PersonDetails = () => {
-  const [individualDetails, setIndividualDetails] = useState({
-    id: 0,
-    name: "",
-    phone: "",
-  });
-  const { id } = useParams();
+  const [personsList, setPersonsList] = useState([])
   const getIndividualDetails = async () => {
-    const url = `http://localhost:3006/person/${id}`;
-    const response = await fetch(url);
-    const responseData = await response.json();
-    setIndividualDetails({
-      id: responseData.id,
-      name: responseData.name,
-      phone: responseData.phone,
-    });
-  };
+    const url = `http://localhost:3006/persons/`
+    const response = await fetch(url)
+    const responseData = await response.json()
+    const tempPersonsList = responseData.map((person) => {
+      return {
+        id: person.id,
+        name: person.name,
+        phone: person.phone,
+      }
+    })
+    setPersonsList(tempPersonsList)
+  }
 
   useEffect(() => {
-    getIndividualDetails();
-  }, []);
+    getIndividualDetails()
+  }, [])
 
   return (
     <MainContainer>
       <Heading>Person Details</Heading>
-      <Paragraph>{individualDetails.id}</Paragraph>
-      <Paragraph>{individualDetails.name}</Paragraph>
-      <Paragraph>{individualDetails.phone}</Paragraph>
+      {personsList.map((eachPerson) => (
+        <>
+          <Paragraph>{eachPerson.id}</Paragraph>
+          <Paragraph>{eachPerson.name}</Paragraph>
+          <Paragraph>{eachPerson.phone}</Paragraph>
+        </>
+      ))}
     </MainContainer>
-  );
-};
+  )
+}
 
-export default PersonDetails;
+export default PersonDetails
