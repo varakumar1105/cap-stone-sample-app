@@ -12,7 +12,6 @@ describe("Persons endpoints", () => {
   it("should return and get the data from the db", async () => {
     await request(baseUrl).post("person").send(personDetails);
     const response = await request(baseUrl).get(`person/${personDetails.id}`);
-    requestId = personDetails.Id;
     expect(response.body).toMatchObject({
       id: personDetails.id,
       name: "tester",

@@ -3,12 +3,12 @@ const path = require("path");
 const { open } = require("sqlite");
 const sqlite3 = require("sqlite3");
 const cors = require("cors");
-const { response } = require("express");
+
 const dbPath = path.join(__dirname, "peopledata.db");
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3004" }));
+app.use(cors({ origin: "*" }));
 
 let db = null;
 
@@ -25,12 +25,14 @@ const initializeDBAndServer = async () => {
 };
 initializeDBAndServer();
 
+
 app.post("/person", async (request, response) => {
   const { id, name, phone } = request.body;
   const createNewPersonQuery = `INSERT INTO persons (id, name, phone) VALUES('${id}', '${name}', '${phone}')`;
   await db.run(createNewPersonQuery);
   response.json("Created Person Successfully");
 });
+
 
 app.get("/person/:id/", async (request, response) => {
   const { id } = request.params;
