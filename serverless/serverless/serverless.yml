@@ -1,0 +1,55 @@
+
+service: capstone-lambda-service
+frameworkVersion: '3'
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'alpha'}
+  profile: ${env:PROFILE}
+  apiName: ${env:PROJECT_NAME}
+  region: ap-south-1
+  memorySize: 512
+  timeout: 10
+  lambdaHashingVersion: 20201221
+  endpointType: regional
+  logs:
+    restApi: true
+    level: INFO
+  deploymentBucket:
+    blockPublicAccess: true
+    name: ${env:CODE_DEPLOYMENT_BUCKET}
+    maxPreviousDeploymentArtifacts: 3
+  # environment:
+  #   SENTRY_DSN: ${env:SENTRY_DSN}
+  #   AWS_ACCOUNT_ID: ${env:AWS_ACCOUNT_ID}
+  #   CUSTOM_AWS_ACCESS_KEY_ID: ${env:CUSTOM_AWS_ACCESS_KEY_ID}
+  #   CUSTOM_AWS_SECRET_ACCESS_KEY: ${env:CUSTOM_AWS_SECRET_ACCESS_KEY}
+  #   LOG_LEVEL: ${env:LOG_LEVEL}
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: '*'
+
+package:
+  individually: true
+  patterns:
+    - '!.venv/**'
+    - '!venv/**'
+    - '!env_*'
+    - '!.env*'
+    - '!.git/**'
+    - '!.idea/**'
+    - '!__pycache__/**'
+    - '!config/**'
+    - '!node_modules/**'
+    - '!layers/**'
+    - '!*.pyc'
+    - '!static/**'
+    - '!media/**'
+    - '!db.sqlite3'
+    - '!*.ipynb'

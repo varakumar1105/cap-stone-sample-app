@@ -4,6 +4,9 @@
 
 # dependencies
 /**/node_modules
+/**/.serverless
+/**/.env.alpha
+/**/package-lock.json
 /.pnp
 .pnp.js
 
