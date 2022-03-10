@@ -5,7 +5,7 @@ import { MainContainer, Heading, Paragraph } from "./styledComponents"
 const PersonDetails = () => {
   const [personsList, setPersonsList] = useState([])
   const getIndividualDetails = async () => {
-    const url = `http://localhost:3006/persons/`
+    const url = `http://localhost:4000/persons/`
     const response = await fetch(url)
     const responseData = await response.json()
     const tempPersonsList = responseData.map((person) => {

@@ -1,6 +1,6 @@
 const request = require("supertest");
 
-const baseUrl = "http://localhost:3006/";
+const baseUrl = "http://localhost:4000/";
 
 const personDetails = {
   id: Math.floor(Math.random() * (1000000 - 999 + 1) + 999),
