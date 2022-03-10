@@ -40,5 +40,7 @@ Added an endpoint which takes and URL as a query parameter and will run puppetee
 
 * Have to test `POST` request with authentication.
 
+---
+
 serverless create --template aws-nodejs --path myService
 serverless invoke local --function functionName
