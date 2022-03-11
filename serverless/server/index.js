@@ -38,5 +38,7 @@ app.get("/persons", async (request, response) => {
   const getPersonDataQuery = `SELECT * FROM persons`;
   const jsonPersonsData = await db.all(getPersonDataQuery);
   console.log(jsonPersonsData)
-  response.json(jsonPersonsData);
+  response.send(jsonPersonsData);
 });
+
+module.exports = app;

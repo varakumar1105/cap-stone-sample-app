@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-11T11:47:26.502Z",
+    "end": "2022-03-11T11:47:26.565Z",
+    "duration": 63,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "10c8e3d1-dbe8-49bd-914f-a5186f1e1b2d",
+      "title": "",
+      "fullFile": "/home/varakumar/Workspace/cap-stone/cap-stone-sample-app/serverless/test/test_001.js",
+      "file": "/test/test_001.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9cdccabc-2c5d-4caf-aab6-0becfdcdb51a",
+          "title": "Persons APIS",
+          "fullFile": "/home/varakumar/Workspace/cap-stone/cap-stone-sample-app/serverless/test/test_001.js",
+          "file": "/test/test_001.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "8b00ed81-97ab-460d-97b5-b7eb8eda7c03",
+              "title": "POST /person",
+              "fullFile": "/home/varakumar/Workspace/cap-stone/cap-stone-sample-app/serverless/test/test_001.js",
+              "file": "/test/test_001.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "it should create a new person",
+                  "fullTitle": "Persons APIS POST /person it should create a new person",
+                  "timedOut": false,
+                  "duration": 30,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "a5ca122b-b2d5-46de-8dbe-0684f052b7a9",
+                  "parentUUID": "8b00ed81-97ab-460d-97b5-b7eb8eda7c03",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a5ca122b-b2d5-46de-8dbe-0684f052b7a9"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 30,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "3c253848-58b1-4620-bd66-45adfb8bf26b",
+              "title": "GET /persons",
+              "fullFile": "/home/varakumar/Workspace/cap-stone/cap-stone-sample-app/serverless/test/test_001.js",
+              "file": "/test/test_001.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "it should get list of persons",
+                  "fullTitle": "Persons APIS GET /persons it should get list of persons",
+                  "timedOut": false,
+                  "duration": 10,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "dfc5a212-6f2c-40bf-8611-15bd3ea55671",
+                  "parentUUID": "3c253848-58b1-4620-bd66-45adfb8bf26b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "dfc5a212-6f2c-40bf-8611-15bd3ea55671"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 10,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "index",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": false
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": {
+        "code": false,
+        "charts": true,
+        "overwrite": true,
+        "saveJson": true,
+        "reportPageTitle": "Test Report",
+        "reportTitle": "Test Report",
+        "reportDir": "./test-reports/test_001/user_001",
+        "assetsDir": "./test-reports/test_001/user_001/assets",
+        "reportFilename": "index"
+      },
+      "version": "6.1.1"
+    }
+  }
+}
