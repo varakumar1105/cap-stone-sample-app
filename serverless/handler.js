@@ -1,5 +1,4 @@
 const { mochaRun } = require("./mochaRun");
-const playwright = require("playwright-aws-lambda");
 
 ("use strict");
 
@@ -18,7 +17,6 @@ module.exports.hello = async (event) => {
 };
 
 module.exports.runTests = async (event, context) => {
-  let browser = null;
   const testDetails = { user_id: 200, test_id: 101 };
   try {
     const result = await mochaRun(testDetails);
