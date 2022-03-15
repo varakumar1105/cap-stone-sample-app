@@ -1,44 +1,27 @@
+const axios = require("axios");
+let express = require("express");
+const app = express();
+const request = require("supertest");
+const expect = require("chai").expect;
 const playwright = require("playwright-aws-lambda");
-let chai = require("chai");
-const expect = chai.expect;
-let chaiHttp = require("chai-http");
-let server = require("../../server/index");
-
-chai.should();
-chai.use(chaiHttp);
 
 describe("Persons APIS", () => {
-  describe("POST /person", () => {
-    const personDetails = {
-      id: Math.floor(Math.random() * (1000000 - 999 + 1) + 999),
-      name: "tester",
-      phone: "998876",
-    };
-    it("it should create a new person", (done) => {
-      chai
-        .request(server)
-        .post("/person")
-        .send(personDetails)
-        .end((err, response) => {
-          response.text.should.equal('"Created Person Successfully"');
-          done();
-        });
-    });
-  });
   describe("GET /persons", () => {
-    it("it should get list of persons", (done) => {
-      chai
-        .request(server)
-        .get("/persons")
-        .end((err, response) => {
-          response.should.have.status(200);
-          console.log("testing");
-          response.body.should.have.a("array");
-          done();
-        });
+    it("it should get persons", async () => {
+      const getPersons = async () => {
+        try {
+          let response = await axios.get("http://localhost:3006/persons");
+          return response.data;
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      let data = await getPersons();
+      expect(getPersons().length).not.eql(0);
     });
   });
-  describe("Persons data frontend", () => {
+
+  describe("Persons data in client", () => {
     let browser;
     let page;
     let context;
@@ -49,7 +32,7 @@ describe("Persons APIS", () => {
     });
 
     it("it should show persons names", async () => {
-      await page.goto("http://localhost:3000/persons");
+      await page.goto("http://localhost:3004/persons");
       const heading = await page.$eval("h1", (el) => el.textContent.trim());
       expect(heading).to.equal("Person Details");
     });
