@@ -32,9 +32,10 @@ app.post("/person", async (request, response) => {
   response.json("Created Person Successfully");
 });
 
-app.get("/person/:id/", async (request, response) => {
-  const { id } = request.params;
-  const getPersonDataQuery = `SELECT * FROM persons WHERE id = '${id}'`;
-  const jsonPersonData = await db.get(getPersonDataQuery);
+app.get("/persons", async (request, response) => {
+  const getPersonDataQuery = `SELECT * FROM persons`;
+  const jsonPersonData = await db.all(getPersonDataQuery);
   response.send(jsonPersonData);
 });
+
+module.exports = app;
