@@ -1,6 +1,4 @@
 let Mocha = require("mocha");
-let fs = require("fs");
-let path = require("path");
 
 module.exports.mochaRun = (testDetails) => {
   const { user_id, test_id } = testDetails;
@@ -13,13 +11,13 @@ module.exports.mochaRun = (testDetails) => {
       saveJson: true,
       reportPageTitle: "Assignmets Report",
       reportTitle: "Assignmets Report",
-      reportDir: `../test/test_${test_id}/user_${user_id}`,
-      assetsDir: `../test/test_${test_id}/user_${user_id}/assets`,
+      reportDir: `test-reports/test_${test_id}/user_${user_id}`,
+      assetsDir: `test-reports/test_${test_id}/user_${user_id}/assets`,
       reportFilename: "index",
     },
   });
 
-  mocha.addFile(`../test/test_${test_id}`);
+  mocha.addFile(`test/test_${test_id}`);
   const runner = mocha.run(function (failures) {
     process.exitCode = failures ? 1 : 0;
     if (failures) {

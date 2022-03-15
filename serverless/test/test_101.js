@@ -2,7 +2,7 @@ const playwright = require("playwright-aws-lambda");
 let chai = require("chai");
 const expect = chai.expect;
 let chaiHttp = require("chai-http");
-let server = require("../server/index");
+let server = require("../../server/index");
 
 chai.should();
 chai.use(chaiHttp);
@@ -49,7 +49,7 @@ describe("Persons APIS", () => {
     });
 
     it("it should show persons names", async () => {
-      await page.goto("http://localhost:3004/persons");
+      await page.goto("http://localhost:3000/persons");
       const heading = await page.$eval("h1", (el) => el.textContent.trim());
       expect(heading).to.equal("Person Details");
     });
