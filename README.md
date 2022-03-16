@@ -37,7 +37,7 @@
     ```
 4. Start the server
     ```bash
-    nodemon index.js
+    serverless invoke local --function runTests
     ```
 
 ## Todos
