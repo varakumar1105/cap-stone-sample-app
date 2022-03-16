@@ -21,8 +21,6 @@ module.exports.mochaRun = (testDetails) => {
   const runner = mocha.run();
 
   return new Promise((resolve) => {
-    runner.on("start", function () { });
-    runner.on("pass", function (test) { });
     runner.on("end", function () {
       resolve("success");
     });
