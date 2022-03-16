@@ -8,7 +8,9 @@ const index = async () => {
       statusCode: 200,
       result: result,
     })
-    // process.exit(-1)
+    setTimeout(() => {
+      process.exit(-1)
+    }, 2000)
   } catch (error) {
     console.log(`code execution failed: ${error}`)
   }
