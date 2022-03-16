@@ -43,9 +43,9 @@
 ## Todos
 
 - [ ] Write an API call that accepts project id and the user id
-- [ ] Get the projects `client.zip` and `server.zip` from the S3 using the project id and user id and extract them here
+- [ ] Get the projects `client.zip` and `server.zip` from the S3 using the project id and user id and extract them
 
-  Note: Unlike here, `client` and `server` folders will not be provided. We need to get them from S3
+  **Note:** Unlike here, `client` and `server` folders will not be provided. We need to get them from S3
 - [ ] Start the frontend and backend servers, then run the tests with the above commands
 - [ ] After running test cases, compress the `test-reports` folder and upload it to S3, providing the URL to S3.
 
