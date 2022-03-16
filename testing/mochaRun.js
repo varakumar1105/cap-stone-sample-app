@@ -15,6 +15,7 @@ module.exports.mochaRun = (testDetails) => {
       assetsDir: `test-reports/test_${test_id}/user_${user_id}/assets`,
       reportFilename: "index",
     },
+    exit: true
   });
 
   mocha.addFile(`test/test_${test_id}`);
