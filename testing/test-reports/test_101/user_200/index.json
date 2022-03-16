@@ -1,0 +1,187 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-16T11:39:12.822Z",
+    "end": "2022-03-16T11:39:13.226Z",
+    "duration": 404,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "15aea518-f760-4ce9-b41e-5d05c790cae6",
+      "title": "",
+      "fullFile": "/home/varakumar/Workspace/cap-stone/cap-stone-sample-app/testing/test/test_101",
+      "file": "/test/test_101",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4eb3bb1a-48ee-4a2d-b57c-8e2945dfc922",
+          "title": "Persons APIS",
+          "fullFile": "/home/varakumar/Workspace/cap-stone/cap-stone-sample-app/testing/test/test_101",
+          "file": "/test/test_101",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "e4fc97dd-d3dc-4dfb-aedc-31569f8c13a6",
+              "title": "GET /persons",
+              "fullFile": "/home/varakumar/Workspace/cap-stone/cap-stone-sample-app/testing/test/test_101",
+              "file": "/test/test_101",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "it should get persons",
+                  "fullTitle": "Persons APIS GET /persons it should get persons",
+                  "timedOut": false,
+                  "duration": 8,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "f3458366-8fbd-4b34-8ce9-c5df95779a28",
+                  "parentUUID": "e4fc97dd-d3dc-4dfb-aedc-31569f8c13a6",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "f3458366-8fbd-4b34-8ce9-c5df95779a28"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 8,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "5f131177-c0ef-4bb3-9671-b72703123552",
+              "title": "Persons data in client",
+              "fullFile": "/home/varakumar/Workspace/cap-stone/cap-stone-sample-app/testing/test/test_101",
+              "file": "/test/test_101",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook in \"Persons data in client\"",
+                  "fullTitle": "Persons APIS Persons data in client \"before all\" hook in \"Persons data in client\"",
+                  "timedOut": false,
+                  "duration": 205,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "cf8ff175-80fe-4782-95ed-04498d2bf2ae",
+                  "parentUUID": "5f131177-c0ef-4bb3-9671-b72703123552",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "it should show persons names",
+                  "fullTitle": "Persons APIS Persons data in client it should show persons names",
+                  "timedOut": false,
+                  "duration": 185,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "8e4e5bb8-c724-46fc-b28f-5dbdcd619577",
+                  "parentUUID": "5f131177-c0ef-4bb3-9671-b72703123552",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8e4e5bb8-c724-46fc-b28f-5dbdcd619577"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 185,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "index",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": false
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": {
+        "code": false,
+        "charts": true,
+        "overwrite": true,
+        "saveJson": true,
+        "reportPageTitle": "Assignmets Report",
+        "reportTitle": "Assignmets Report",
+        "reportDir": "test-reports/test_101/user_200",
+        "assetsDir": "test-reports/test_101/user_200/assets",
+        "reportFilename": "index"
+      },
+      "version": "6.1.1"
+    }
+  }
+}

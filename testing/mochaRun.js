@@ -18,20 +18,13 @@ module.exports.mochaRun = (testDetails) => {
   });
 
   mocha.addFile(`test/test_${test_id}`);
-  const runner = mocha.run(function (failures) {
-    process.exitCode = failures ? 1 : 0;
-    if (failures) {
-      console.error("Failed test cases");
-    }
-    return "Test cases executed successfully";
-  });
+  const runner = mocha.run();
+
   return new Promise((resolve) => {
-    runner.on("start", function () {});
-    runner.on("pass", function (test) {});
-    runner.on("suite end", function () {
-      // mocha.unloadFiles();
+    runner.on("start", function () { });
+    runner.on("pass", function (test) { });
+    runner.on("end", function () {
       resolve("success");
-      console.log("mocha run ended");
     });
   });
 };
