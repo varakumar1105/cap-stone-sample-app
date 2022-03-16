@@ -2,25 +2,29 @@
 
 ### Steps
 
-Navigate to client and start client app using below command
+1. Go to path `.\client\` and start client app using below command
 
 ```bash
 npm start
 ```
 
-Navigate to server and start server app using using below command
+2. Go to path `.\server\` and start server app using using below command
 
 ```bash
 nodemon index.js
 ```
 
-Navigate to serveless folder and execute the handler function
+3. Navigate to serveless folder and execute the handler function
 
 ```bash
 serverless invoke local --function runTests
 ```
 
-`npx playwright install` for installing supported browsers
+Use the below command for installing supported browsers
+
+```bash
+npx playwright install
+```
 
 ### End-to-end Flow
 
@@ -28,5 +32,3 @@ serverless invoke local --function runTests
 - Get the project from the S3 based on project id and user id
 - Extract the project and run the frontend and backend servers and then run tests
 - Compress the test results and upload it to S3 and provide the url
-
-> serverless invoke local --function runTests
