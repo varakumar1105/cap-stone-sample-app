@@ -10,9 +10,9 @@ const index = async () => {
     const result = await mochaRun(testDetails);
 
     const testReportStatus = await new Promise((resolve, reject) => {
-      (function waitForFoo(){
+      (function waitForDirectory(){
           if (fs.existsSync("test-reports")) return resolve(true);
-          setTimeout(waitForFoo, 100);
+          setTimeout(waitForDirectory, 100);
       })();
     });
 
