@@ -13,9 +13,9 @@ module.exports.mochaRun = (testDetails) => {
       reportTitle: "Assignments Report",
       reportDir: `test-reports/test_${test_id}/user_${user_id}`,
       assetsDir: `test-reports/test_${test_id}/user_${user_id}/assets`,
-      reportFilename: "index",
+      reportFilename: "index"
     },
-    exit: true
+    dispose: () => {console.log("Disposed")}
   });
 
   mocha.addFile(`test/test_${test_id}`);
@@ -23,6 +23,7 @@ module.exports.mochaRun = (testDetails) => {
 
   return new Promise((resolve) => {
     runner.on("end", function () {
+      console.log("end");
       resolve("success");
     });
   });
