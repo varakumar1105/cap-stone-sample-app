@@ -5,7 +5,11 @@ const index = async () => {
   const testDetails = { user_id: 200, test_id: 101 };
   try {
 
-    fs.rmSync('test-reports', { recursive: true }); 
+    try{
+      fs.rmSync('test-reports', { recursive: true });
+    }catch(err){
+      console.log("No such directory initially")
+    } 
 
     const result = await mochaRun(testDetails);
 
